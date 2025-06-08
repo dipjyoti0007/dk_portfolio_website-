@@ -29,7 +29,7 @@ const Hero = () => {
                 Innovator in Embedded Systems & IoT | Biomedical Prototype Developer
               </h2>
               <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg mb-8">
-                <p className="text-lg text-muted-foreground leading-relaxed">Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about sensor technologies, embedded systems, and IoT.</p>
+                <p className="text-lg text-muted-foreground leading-relaxed">Hi, I'm Dipjyoti Kodali, a final-year student and tech innovator passionate about sensor technologies, embedded systems, and IoT.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" onClick={() => document.getElementById('portfolio')?.scrollIntoView({

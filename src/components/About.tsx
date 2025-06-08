@@ -27,15 +27,15 @@ const About = () => {
                   <div className="relative">
                     <div className="w-40 h-40 rounded-full bg-gradient-to-r from-primary to-accent p-1">
                       <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                        <img src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png" alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" />
+                        <img alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/814cc8fc-483e-43ad-9207-e8b4cb1a9a2e.jpg" />
                       </div>
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full opacity-80"></div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h3 className="text-2xl font-semibold mb-2 text-primary">Dipjyoti Kodali</h3>
-                    <p className="text-muted-foreground mb-2">Final-year Student</p>
-                    <p className="text-sm text-muted-foreground">Heritage Institute of Technology, Kolkata</p>
+                    <p className="text-muted-foreground mb-2">Heritage Institute of Technology, Kolkata</p>
+                    
                   </div>
                 </div>
               </CardContent>
@@ -45,16 +45,10 @@ const About = () => {
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full"></div>
               <CardContent className="p-0 relative z-10">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about 
-                  sensor technologies, embedded systems, and IoT. I love turning complex challenges into 
-                  smart, practical solutions with a blend of creativity and curiosity.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Beyond tech, I'm a music lover, sports enthusiast, and event organizer who believes 
-                  in a well-rounded, fun approach to life! Currently maintaining a strong academic record 
-                  with a SGPA of 9.95 at Heritage Institute of Technology, Kolkata.
-                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">I'm Dipjyoti Kodali, an electronics enthusiast, tech innovator, and lifelong learner from India. I'm currently pursuing my undergraduate degree in Electronics and Instrumentation Engineering at Heritage Institute of Technology, where my passion for creating meaningful, tech-driven solutions truly took shape.
+
+From sensor-based health devices to IoT systems that think smartly, I enjoy turning complex problems into real-world prototypes. I believe the right mix of hardware, code, and creativity can spark genuine change—and I love being part of that process.</p>
+                
               </CardContent>
             </Card>
           </div>
@@ -69,7 +63,7 @@ const About = () => {
                   <div className="border-l-4 border-primary pl-4 relative">
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full"></div>
                     <h4 className="font-semibold text-lg">Embedded Systems & IoT R&D Intern</h4>
-                    <p className="text-sm text-muted-foreground">Techavo Systems • Current</p>
+                    <p className="text-sm text-muted-foreground">Techavo Systems </p>
                     <p className="text-sm mt-1">Developing cutting-edge and low powered solutions using LoRa modules for IoT applications</p>
                   </div>
                   
