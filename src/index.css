@@ -25,8 +25,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 195 100% 40%;
     --radius: 0.5rem;
-    --warm-brown: 30 25% 55%;
-    --light-brown: 30 20% 75%;
+    --warm-brown: 25 35% 60%;
+    --light-brown: 30 25% 75%;
   }
 
   .dark {
@@ -49,8 +49,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 195 100% 50%;
-    --warm-brown: 30 30% 60%;
-    --light-brown: 30 25% 80%;
+    --warm-brown: 25 40% 65%;
+    --light-brown: 30 30% 80%;
   }
 }
 
@@ -71,12 +71,12 @@
 @layer components {
   .tech-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsla(195, 100%, 40%, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsla(180, 100%, 45%, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, hsla(25, 35%, 60%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(30, 25%, 75%, 0.1) 0%, transparent 50%);
   }
   
   .warm-gradient {
-    background: linear-gradient(135deg, hsla(195, 100%, 40%, 0.1) 0%, hsla(30, 25%, 55%, 0.1) 100%);
+    background: linear-gradient(135deg, hsla(25, 35%, 60%, 0.1) 0%, hsla(30, 25%, 75%, 0.1) 100%);
   }
   
   .floating-animation {
