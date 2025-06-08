@@ -25,6 +25,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 195 100% 40%;
     --radius: 0.5rem;
+    --warm-brown: 30 25% 55%;
+    --light-brown: 30 20% 75%;
   }
 
   .dark {
@@ -47,6 +49,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 195 100% 50%;
+    --warm-brown: 30 30% 60%;
+    --light-brown: 30 25% 80%;
   }
 }
 
@@ -71,6 +75,10 @@
       radial-gradient(circle at 75% 75%, hsla(180, 100%, 45%, 0.1) 0%, transparent 50%);
   }
   
+  .warm-gradient {
+    background: linear-gradient(135deg, hsla(195, 100%, 40%, 0.1) 0%, hsla(30, 25%, 55%, 0.1) 100%);
+  }
+  
   .floating-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -81,6 +89,12 @@
   
   .skill-bar {
     transition: width 1.5s ease-in-out;
+  }
+
+  .geometric-shape {
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
   }
 }
 
@@ -120,4 +134,17 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotate 20s linear infinite;
 }

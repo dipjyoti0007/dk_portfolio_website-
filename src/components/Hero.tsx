@@ -13,27 +13,37 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center tech-pattern relative overflow-hidden">
-      <div className="container mx-auto px-6 py-20">
+      {/* Enhanced Decorative Elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-tl from-accent/20 to-primary/20 rounded-full blur-2xl"></div>
+      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-primary/30 to-accent/30 transform rotate-45 opacity-60"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-gradient-to-l from-accent/40 to-primary/40 rounded-full opacity-50"></div>
+      
+      <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="fade-in-up">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Dipjyoti Kodali
               </h1>
               <h2 className="text-xl lg:text-2xl text-muted-foreground mb-6 font-medium">
                 Innovator in Embedded Systems & IoT | Biomedical Prototype Developer
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                Final-year AEIE student at Heritage Institute of Technology with a passion for 
-                innovative technology solutions. Specializing in sensor technologies, embedded systems, 
-                and IoT applications that make a real-world impact.
-              </p>
+              <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg mb-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about 
+                  sensor technologies, embedded systems, and IoT. I love turning complex challenges into 
+                  smart, practical solutions with a blend of creativity and curiosity. Beyond tech, I'm a 
+                  music lover, sports enthusiast, and event organizer who believes in a well-rounded, 
+                  fun approach to life!
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
                   onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-lg px-8"
+                  className="text-lg px-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
                 >
                   View My Work
                 </Button>
@@ -41,7 +51,7 @@ const Hero = () => {
                   variant="outline" 
                   size="lg"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-lg px-8"
+                  className="text-lg px-8 border-2 border-primary/20 hover:border-primary/40"
                 >
                   Get In Touch
                 </Button>
@@ -52,18 +62,20 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-primary to-accent p-1 floating-animation">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-primary via-accent to-primary p-1 floating-animation">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                    src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png"
                     alt="Dipjyoti Kodali"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
               </div>
-              {/* Decorative Elements */}
+              {/* Enhanced Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full opacity-60 animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary rounded-full opacity-40 animate-pulse"></div>
+              <div className="absolute top-1/4 -left-8 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-50 rotate-slow"></div>
+              <div className="absolute bottom-1/3 -right-10 w-10 h-10 bg-gradient-to-l from-accent to-primary transform rotate-45 opacity-30"></div>
             </div>
           </div>
         </div>
