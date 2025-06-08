@@ -1,18 +1,16 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center tech-pattern relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center tech-pattern relative overflow-hidden">
       {/* Enhanced Decorative Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl"></div>
       <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-tl from-accent/20 to-primary/20 rounded-full blur-2xl"></div>
@@ -24,35 +22,24 @@ const Hero = () => {
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="fade-in-up">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              <h1 className="text-5xl mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-left lg:text-6xl font-bold text-sky-600">
                 Dipjyoti Kodali
               </h1>
               <h2 className="text-xl lg:text-2xl text-muted-foreground mb-6 font-medium">
                 Innovator in Embedded Systems & IoT | Biomedical Prototype Developer
               </h2>
               <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg mb-8">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about 
-                  sensor technologies, embedded systems, and IoT. I love turning complex challenges into 
-                  smart, practical solutions with a blend of creativity and curiosity. Beyond tech, I'm a 
-                  music lover, sports enthusiast, and event organizer who believes in a well-rounded, 
-                  fun approach to life!
-                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about sensor technologies, embedded systems, and IoT.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-lg px-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-                >
+                <Button size="lg" onClick={() => document.getElementById('portfolio')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-lg px-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
                   View My Work
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-lg px-8 border-2 border-primary/20 hover:border-primary/40"
-                >
+                <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-lg px-8 border-2 border-primary/20 hover:border-primary/40">
                   Get In Touch
                 </Button>
               </div>
@@ -64,11 +51,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-primary via-accent to-primary p-1 floating-animation">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png"
-                    alt="Dipjyoti Kodali"
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                  <img src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png" alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" />
                 </div>
               </div>
               {/* Enhanced Decorative Elements */}
@@ -87,8 +70,6 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
