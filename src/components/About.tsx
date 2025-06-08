@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+
 const About = () => {
-  return <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+  return (
+    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 warm-gradient"></div>
       <div className="geometric-shape top-10 left-10 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full blur-3xl"></div>
@@ -27,7 +30,11 @@ const About = () => {
                   <div className="relative">
                     <div className="w-40 h-40 rounded-full bg-gradient-to-r from-primary to-accent p-1">
                       <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                        <img src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png" alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" />
+                        <img
+                          src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png"
+                          alt="Dipjyoti Kodali"
+                          className="w-full h-full object-cover rounded-full"
+                        />
                       </div>
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full opacity-80"></div>
@@ -45,17 +52,16 @@ const About = () => {
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full"></div>
               <CardContent className="p-0 relative z-10">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Hey there, welcome! 👋
-
-I'm Dipjyoti Kodali, an electronics enthusiast, tech innovator, and lifelong learner from India. I'm currently pursuing my undergraduate degree in Electronics and Instrumentation Engineering at Heritage Institute of Technology, where my passion for creating meaningful, tech-driven solutions truly took shape.
-
-From sensor-based health devices to IoT systems that think smartly, I enjoy turning complex problems into real-world prototypes. I believe the right mix of hardware, code, and creativity can spark genuine change—and I love being part of that process.
-
-When I’m not immersed in code or hardware debugging, you’ll probably catch me:
-🎸 Playing music
-📷 Experimenting with photography
-🏏 Or vibing with a cricket match</p>
-                <p className="text-muted-foreground leading-relaxed">Beyond tech, I'm a music lover, sports enthusiast, and event organizer who believes in a well-rounded, fun approach to life! </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about 
+                  sensor technologies, embedded systems, and IoT. I love turning complex challenges into 
+                  smart, practical solutions with a blend of creativity and curiosity.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Beyond tech, I'm a music lover, sports enthusiast, and event organizer who believes 
+                  in a well-rounded, fun approach to life! Currently maintaining a strong academic record 
+                  with a SGPA of 9.95 at Heritage Institute of Technology, Kolkata.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -117,6 +123,8 @@ When I’m not immersed in code or hardware debugging, you’ll probably catch m
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;
