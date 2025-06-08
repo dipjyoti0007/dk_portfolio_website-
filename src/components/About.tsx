@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+  return <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 warm-gradient"></div>
       <div className="geometric-shape top-10 left-10 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full blur-3xl"></div>
@@ -30,18 +27,14 @@ const About = () => {
                   <div className="relative">
                     <div className="w-40 h-40 rounded-full bg-gradient-to-r from-primary to-accent p-1">
                       <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                        <img
-                          src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png"
-                          alt="Dipjyoti Kodali"
-                          className="w-full h-full object-cover rounded-full"
-                        />
+                        <img src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png" alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" />
                       </div>
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full opacity-80"></div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h3 className="text-2xl font-semibold mb-2 text-primary">Dipjyoti Kodali</h3>
-                    <p className="text-muted-foreground mb-2">Final-year AEIE Student</p>
+                    <p className="text-muted-foreground mb-2">Final-year Student</p>
                     <p className="text-sm text-muted-foreground">Heritage Institute of Technology, Kolkata</p>
                   </div>
                 </div>
@@ -77,21 +70,21 @@ const About = () => {
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full"></div>
                     <h4 className="font-semibold text-lg">Embedded Systems & IoT R&D Intern</h4>
                     <p className="text-sm text-muted-foreground">Techavo Systems • Current</p>
-                    <p className="text-sm mt-1">Developing cutting-edge solutions in biomedical technology and IoT applications</p>
+                    <p className="text-sm mt-1">Developing cutting-edge and low powered solutions using LoRa modules for IoT applications</p>
                   </div>
                   
                   <div className="border-l-4 border-accent pl-4 relative">
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-accent rounded-full"></div>
                     <h4 className="font-semibold text-lg">Head of Innovation</h4>
-                    <p className="text-sm text-muted-foreground">ISOI • Leadership Role</p>
+                    <p className="text-sm text-muted-foreground">ISOI • Instructor</p>
                     <p className="text-sm mt-1">Leading innovation initiatives, mentoring fellow students, and driving technological advancement in academic community</p>
                   </div>
                   
                   <div className="border-l-4 border-primary pl-4 relative">
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full"></div>
                     <h4 className="font-semibold text-lg">Previous Internships</h4>
-                    <p className="text-sm text-muted-foreground">Haldia Petrochemicals • Hewlett Packard Enterprise India</p>
-                    <p className="text-sm mt-1">Gained valuable industry experience in petrochemicals and enterprise technology</p>
+                    <p className="text-sm text-muted-foreground">Haldia Petrochemicals Limited (HPL) • Hewlett Packard Enterprise India</p>
+                    <p className="text-sm mt-1">Gained valuable industry experience in one of the leading petrochemical industry and completed diploma in finance and accounting</p>
                   </div>
                 </div>
               </CardContent>
@@ -106,7 +99,7 @@ const About = () => {
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-accent rounded-full"></div>
                     <h4 className="font-semibold text-lg">B.Tech in Applied Electronics and Instrumentation Engineering</h4>
                     <p className="text-sm text-muted-foreground">Heritage Institute of Technology, Kolkata</p>
-                    <p className="text-sm mt-1">SGPA: 9.95 • Expected Graduation: 2025 (2022-2026)</p>
+                    <p className="text-sm mt-1">GPA: 9.95 • Graduation: 2026</p>
                   </div>
                   
                   <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 rounded-lg">
@@ -123,8 +116,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
