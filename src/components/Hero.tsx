@@ -1,53 +1,45 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-warm-brown/5 to-light-brown/10">
-      {/* Minimalistic Decorative Elements */}
-      <div className="absolute top-32 left-20 w-20 h-20 bg-warm-brown/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-40 right-24 w-24 h-24 bg-light-brown/15 rounded-full blur-2xl"></div>
+  return <section id="home" className="min-h-screen flex items-center justify-center tech-pattern relative overflow-hidden">
+      {/* Enhanced Decorative Elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-tl from-accent/20 to-primary/20 rounded-full blur-2xl"></div>
+      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-primary/30 to-accent/30 transform rotate-45 opacity-60"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-gradient-to-l from-accent/40 to-primary/40 rounded-full opacity-50"></div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="fade-in-up">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-warm-brown to-light-brown bg-clip-text text-transparent">
+              <h1 className="text-5xl mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-left lg:text-6xl font-bold text-sky-600">
                 Dipjyoti Kodali
               </h1>
               <h2 className="text-xl lg:text-2xl text-muted-foreground mb-6 font-medium">
-                Electronics Enthusiast | Tech Innovator | Lifelong Learner
+                Innovator in Embedded Systems & IoT | Biomedical Prototype Developer
               </h2>
-              <div className="bg-gradient-to-r from-warm-brown/5 to-light-brown/10 p-6 rounded-lg mb-8 border border-warm-brown/20">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Passionate about creating meaningful, tech-driven solutions through sensor technologies, 
-                  embedded systems, and IoT innovations.
-                </p>
+              <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg mb-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">Hi, I'm Dipjyoti Kodali, a final-year AEIE student and tech innovator passionate about sensor technologies, embedded systems, and IoT.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })} 
-                  className="text-lg px-8 bg-gradient-to-r from-warm-brown to-light-brown hover:from-warm-brown/90 hover:to-light-brown/90"
-                >
+                <Button size="lg" onClick={() => document.getElementById('portfolio')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-lg px-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
                   View My Work
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-                  className="text-lg px-8 border-2 border-warm-brown/30 hover:border-warm-brown/50"
-                >
+                <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="text-lg px-8 border-2 border-primary/20 hover:border-primary/40">
                   Get In Touch
                 </Button>
               </div>
@@ -57,18 +49,16 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-warm-brown/30 via-light-brown/40 to-warm-brown/30 p-1 floating-animation">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-primary via-accent to-primary p-1 floating-animation">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/ad68c0c1-4a3b-4bc6-8871-5fbfbfa56b96.png" 
-                    alt="Dipjyoti Kodali" 
-                    className="w-full h-full object-cover rounded-full" 
-                  />
+                  <img src="/lovable-uploads/530db522-0c45-4303-b72a-4c63eae466d5.png" alt="Dipjyoti Kodali" className="w-full h-full object-cover rounded-full" />
                 </div>
               </div>
-              {/* Subtle Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-6 h-6 bg-warm-brown/40 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-light-brown/50 rounded-full animate-pulse"></div>
+              {/* Enhanced Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full opacity-60 animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary rounded-full opacity-40 animate-pulse"></div>
+              <div className="absolute top-1/4 -left-8 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-50 rotate-slow"></div>
+              <div className="absolute bottom-1/3 -right-10 w-10 h-10 bg-gradient-to-l from-accent to-primary transform rotate-45 opacity-30"></div>
             </div>
           </div>
         </div>
@@ -80,8 +70,6 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
