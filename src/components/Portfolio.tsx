@@ -2,6 +2,8 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Github } from 'lucide-react';
 
 const Portfolio = () => {
   const projects = [
@@ -18,7 +20,8 @@ const Portfolio = () => {
         "Real-time alerts and cloud data storage",
         "Patient-friendly OLED display interface",
         "IoT connectivity for remote monitoring"
-      ]
+      ],
+      githubUrl: "https://github.com/dipjyoti0007/GlucoVision"
     },
     {
       title: "TremorTech",
@@ -32,7 +35,8 @@ const Portfolio = () => {
         "GSR sensor for stress level monitoring",
         "Patient-specific calibration algorithms",
         "Portable and comfortable design"
-      ]
+      ],
+      githubUrl: "https://github.com/dipjyoti0007/TremorTech"
     },
     {
       title: "Cardiovascular Disease Detection",
@@ -46,7 +50,8 @@ const Portfolio = () => {
         "ML-based risk assessment",
         "Early warning system",
         "Comprehensive health analytics"
-      ]
+      ],
+      githubUrl: null
     }
   ];
 
@@ -60,11 +65,23 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader>
-                <CardTitle className="text-xl text-primary mb-2">{project.title}</CardTitle>
+                <div className="flex justify-between items-start mb-2">
+                  <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
+                </div>
                 <p className="text-muted-foreground">{project.description}</p>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -104,9 +121,59 @@ const Portfolio = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* GitHub Link Button */}
+                {project.githubUrl && (
+                  <div className="pt-2">
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full"
+                    >
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <Github className="w-4 h-4" />
+                        View Source Code
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Certificates and Awards Section */}
+        <div className="text-center">
+          <Card className="max-w-md mx-auto hover:shadow-xl transition-all duration-300">
+            <CardHeader>
+              <CardTitle className="text-xl text-primary">🏅 Certificates & Awards</CardTitle>
+              <p className="text-muted-foreground">
+                View all my achievements, certifications, and competition awards
+              </p>
+            </CardHeader>
+            <CardContent>
+              <Button 
+                asChild 
+                className="w-full"
+              >
+                <a 
+                  href="https://github.com/dipjyoti0007/certificates-and-awards"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Github className="w-4 h-4" />
+                  View All Certificates
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
