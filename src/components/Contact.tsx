@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Github, Linkedin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,14 +26,46 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsLoading(true);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('ogfwjcGa5Pwe99uW1');
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_hfq298q', // Service ID
+        'template_rgfdhlb', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Dipjyoti Kodali',
+        }
+      );
+
+      console.log('Email sent successfully:', result);
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: "Failed to send message",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -124,6 +158,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Your full name"
+                      disabled={isLoading}
                     />
                   </div>
                   <div>
@@ -138,6 +173,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="your.email@example.com"
+                      disabled={isLoading}
                     />
                   </div>
                 </div>
@@ -152,6 +188,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="What's this about?"
+                    disabled={isLoading}
                   />
                 </div>
                 <div>
@@ -166,10 +203,11 @@ const Contact = () => {
                     required
                     placeholder="Tell me more about your project or inquiry..."
                     rows={5}
+                    disabled={isLoading}
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>

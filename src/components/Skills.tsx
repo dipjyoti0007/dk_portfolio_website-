@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -13,25 +12,25 @@ const Skills = () => {
       skills: [
         { name: "Python", level: 75 },
         { name: "C/C++", level: 70 },
-        { name: "SQL", level: 85 }
+        { name: "SQL", level: 90 }
       ]
     },
     {
       title: "Embedded Systems & IoT",
       skills: [
-        { name: "Embedded Systems", level: 90 },
-        { name: "IoT Development", level: 85 },
-        { name: "Microcontrollers", level: 88 },
-        { name: "ESP32/Arduino", level: 92 }
+        { name: "Embedded Systems", level: 95 },
+        { name: "IoT Development", level: 90 },
+        { name: "Microcontrollers", level: 92 },
+        { name: "ESP32/Arduino", level: 95 }
       ]
     },
     {
       title: "Hardware & Instrumentation",
       skills: [
         { name: "Sensors & Transducers", level: 80 },
-        { name: "Hardware Prototyping", level: 72 },
-        { name: "Industrial Automation", level: 68 },
-        { name: "Circuit Design", level: 70 }
+        { name: "Hardware Prototyping", level: 85 },
+        { name: "Industrial Automation", level: 80 },
+        { name: "Circuit Design", level: 82 }
       ]
     },
     {
@@ -146,4 +145,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

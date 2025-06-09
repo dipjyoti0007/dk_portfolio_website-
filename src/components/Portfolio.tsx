@@ -10,6 +10,7 @@ const Portfolio = () => {
     {
       title: "GlucoVision",
       description: "A revolutionary tear-guided non-invasive blood glucose monitoring device using optoelectrical sensors and ESP32 microcontroller.",
+      image: "/lovable-uploads/f464507e-0209-4f44-b710-76a7d7d4b2fe.png",
       achievements: [
         "Smart Bengal Hackathon 2024 Winner",
         "Hardware Track Winner at Status Code 1"
@@ -26,6 +27,7 @@ const Portfolio = () => {
     {
       title: "TremorTech",
       description: "An innovative device for Parkinson's tremor management using vibrotactile therapy with Arduino Nano control and GSR sensor integration.",
+      image: "/lovable-uploads/76cafc6c-b3af-4058-ad1e-82dff1e31d8d.png",
       achievements: [
         "2nd Prize Winner at DevX 2024"
       ],
@@ -41,6 +43,7 @@ const Portfolio = () => {
     {
       title: "Cardiovascular Disease Detection",
       description: "Ongoing research project combining IoT sensors and machine learning algorithms for early cardiovascular disease detection.",
+      image: "/lovable-uploads/34944cbf-3a56-4e0b-ad8c-95c9be7b245b.png",
       achievements: [
         "In Development"
       ],
@@ -68,6 +71,15 @@ const Portfolio = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              {/* Project Image */}
+              <div className="w-full h-48 overflow-hidden rounded-t-lg">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
