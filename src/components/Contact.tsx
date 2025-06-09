@@ -34,18 +34,23 @@ const Contact = () => {
       // Initialize EmailJS with your public key
       emailjs.init('ogfwjcGa5Pwe99uW1');
 
-      // Send email using EmailJS
+      // Send email using EmailJS with proper template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Dipjyoti Kodali',
+        reply_to: formData.email,
+      };
+
+      console.log('Sending email with template params:', templateParams);
+
       const result = await emailjs.send(
         'service_hfq298q', // Service ID
         'template_rgfdhlb', // Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_name: 'Dipjyoti Kodali',
-          to_email: 'dipjyotikodali@gmail.com', // Add recipient email
-        }
+        templateParams,
+        'ogfwjcGa5Pwe99uW1' // Public key
       );
 
       console.log('Email sent successfully:', result);
