@@ -63,7 +63,7 @@ From sensor-based health devices to IoT systems that think smartly, I enjoy turn
                   <div className="border-l-4 border-primary pl-4 relative">
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full"></div>
                     <h4 className="font-semibold text-lg">Embedded Systems & IoT R&D Intern</h4>
-                    <p className="text-sm text-muted-foreground">Techavo Systems </p>
+                    <p className="text-sm text-muted-foreground">Techavo Systems </p>
                     <p className="text-sm mt-1">Developing cutting-edge and low powered solutions using LoRa modules for IoT applications</p>
                   </div>
                   
@@ -76,9 +76,16 @@ From sensor-based health devices to IoT systems that think smartly, I enjoy turn
                   
                   <div className="border-l-4 border-primary pl-4 relative">
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-primary rounded-full"></div>
-                    <h4 className="font-semibold text-lg">Previous Internships</h4>
-                    <p className="text-sm text-muted-foreground">Haldia Petrochemicals Limited (HPL) • Hewlett Packard Enterprise India</p>
-                    <p className="text-sm mt-1">Gained valuable industry experience in one of the leading petrochemical industry and completed diploma in finance and accounting</p>
+                    <h4 className="font-semibold text-lg">Technical Intern</h4>
+                    <p className="text-sm text-muted-foreground">Haldia Petrochemicals Limited (HPL)</p>
+                    <p className="text-sm mt-1">Gained valuable industry experience in one of the leading petrochemical industries</p>
+                  </div>
+
+                  <div className="border-l-4 border-accent pl-4 relative">
+                    <div className="absolute -left-2 top-2 w-4 h-4 bg-accent rounded-full"></div>
+                    <h4 className="font-semibold text-lg">Finance & Accounting Intern</h4>
+                    <p className="text-sm text-muted-foreground">Hewlett Packard Enterprise India</p>
+                    <p className="text-sm mt-1">Completed diploma in finance and accounting, gaining comprehensive business knowledge</p>
                   </div>
                 </div>
               </CardContent>

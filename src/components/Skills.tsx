@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -10,16 +11,16 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "C/C++", level: 85 },
-        { name: "SQL", level: 80 }
+        { name: "Python", level: 75 },
+        { name: "C/C++", level: 70 },
+        { name: "SQL", level: 85 }
       ]
     },
     {
       title: "Embedded Systems & IoT",
       skills: [
-        { name: "Embedded Systems", level: 95 },
-        { name: "IoT Development", level: 90 },
+        { name: "Embedded Systems", level: 90 },
+        { name: "IoT Development", level: 85 },
         { name: "Microcontrollers", level: 88 },
         { name: "ESP32/Arduino", level: 92 }
       ]
@@ -27,19 +28,19 @@ const Skills = () => {
     {
       title: "Hardware & Instrumentation",
       skills: [
-        { name: "Sensors & Transducers", level: 93 },
-        { name: "Hardware Prototyping", level: 87 },
-        { name: "Industrial Automation", level: 82 },
-        { name: "Circuit Design", level: 85 }
+        { name: "Sensors & Transducers", level: 80 },
+        { name: "Hardware Prototyping", level: 72 },
+        { name: "Industrial Automation", level: 68 },
+        { name: "Circuit Design", level: 70 }
       ]
     },
     {
       title: "Emerging Technologies",
       skills: [
-        { name: "Machine Learning", level: 78 },
-        { name: "Artificial Intelligence", level: 75 },
-        { name: "Data Science", level: 70 },
-        { name: "Cloud Integration", level: 80 }
+        { name: "Machine Learning", level: 60 },
+        { name: "Artificial Intelligence", level: 58 },
+        { name: "Data Science", level: 55 },
+        { name: "Cloud Integration", level: 65 }
       ]
     }
   ];
@@ -82,7 +83,6 @@ const Skills = () => {
                   <div key={skillIndex} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-secondary rounded-full h-2">
                       <div
@@ -146,3 +146,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
