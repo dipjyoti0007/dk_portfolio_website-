@@ -44,6 +44,7 @@ const Contact = () => {
           subject: formData.subject,
           message: formData.message,
           to_name: 'Dipjyoti Kodali',
+          to_email: 'dipjyotikodali@gmail.com', // Add recipient email
         }
       );
 
