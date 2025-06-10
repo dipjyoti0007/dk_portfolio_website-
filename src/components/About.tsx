@@ -106,7 +106,7 @@ From sensor-based health devices to IoT systems that think smartly, I enjoy turn
                   <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2 text-primary">Beyond Technology</h4>
                     <p className="text-sm text-muted-foreground">
-                      Music lover 🎵 • Sports enthusiast 🏃‍♂️ • Drama & Theater 🎭 • Event Management 📋
+                      Music lover 🎵 • Sports enthusiast 🏏 • Drama & Theater 🎭 • Event Management 📋
                       <br />
                       <span className="italic">Believing in a well-rounded, fun approach to life!</span>
                     </p>

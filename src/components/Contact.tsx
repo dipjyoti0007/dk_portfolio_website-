@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -35,14 +34,13 @@ const Contact = () => {
       // Initialize EmailJS with your public key
       emailjs.init('ogfwjcGa5Pwe99uW1');
 
-      // Prepare template parameters matching your EmailJS template
+      // Updated template parameters to match EmailJS template exactly
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        to_name: 'Dipjyoti Kodali',
-        subject: formData.subject,
-        message: formData.message,
-        reply_to: formData.email,
+        user_name: formData.name,
+        user_email: formData.email,
+        user_subject: formData.subject,
+        user_message: formData.message,
+        to_email: 'dipjyotikodali@gmail.com',
       };
 
       console.log('Template params:', templateParams);
