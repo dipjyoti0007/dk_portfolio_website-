@@ -31,42 +31,50 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
+      console.log('Initializing EmailJS...');
       // Initialize EmailJS with your public key
       emailjs.init('ogfwjcGa5Pwe99uW1');
 
-      // Send email using EmailJS with proper template parameters
+      // Prepare template parameters matching your EmailJS template
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        to_name: 'Dipjyoti Kodali',
         subject: formData.subject,
         message: formData.message,
-        to_name: 'Dipjyoti Kodali',
         reply_to: formData.email,
       };
 
-      console.log('Sending email with template params:', templateParams);
+      console.log('Template params:', templateParams);
+      console.log('Service ID:', 'service_hfq298q');
+      console.log('Template ID:', 'template_rgfdhlb');
 
+      // Send email using EmailJS
       const result = await emailjs.send(
-        'service_hfq298q', // Service ID
-        'template_rgfdhlb', // Template ID
+        'service_hfq298q',
+        'template_rgfdhlb',
         templateParams,
-        'ogfwjcGa5Pwe99uW1' // Public key
+        'ogfwjcGa5Pwe99uW1'
       );
 
-      console.log('Email sent successfully:', result);
+      console.log('EmailJS response:', result);
       
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      
-      // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      if (result.status === 200) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(`EmailJS returned status: ${result.status}`);
+      }
     } catch (error) {
-      console.error('Email sending failed:', error);
+      console.error('Detailed error:', error);
       toast({
         title: "Failed to send message",
-        description: "There was an error sending your message. Please try again.",
+        description: "There was an error sending your message. Please check the console for details or try again.",
         variant: "destructive",
       });
     } finally {
