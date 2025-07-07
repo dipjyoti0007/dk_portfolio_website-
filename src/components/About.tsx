@@ -100,7 +100,7 @@ From sensor-based health devices to IoT systems that think smartly, I enjoy turn
                     <div className="absolute -left-2 top-2 w-4 h-4 bg-accent rounded-full"></div>
                     <h4 className="font-semibold text-lg">B.Tech in Applied Electronics and Instrumentation Engineering</h4>
                     <p className="text-sm text-muted-foreground">Heritage Institute of Technology, Kolkata</p>
-                    <p className="text-sm mt-1">GPA: 10 • Graduation: 2026</p>
+                    <p className="text-sm mt-1">SGPA: 10 • Graduation: 2026</p>
                   </div>
                   
                   <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-4 rounded-lg">
