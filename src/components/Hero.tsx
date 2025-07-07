@@ -25,9 +25,7 @@ const Hero = () => {
               <h1 className="text-5xl mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-left lg:text-6xl font-bold text-sky-600">
                 Dipjyoti Kodali
               </h1>
-              <h2 className="text-xl lg:text-2xl text-muted-foreground mb-6 font-medium">
-                Innovator in Embedded Systems & IoT | Biomedical Prototype Developer
-              </h2>
+              <h2 className="text-xl lg:text-2xl text-muted-foreground mb-6 font-medium">Innovator in Embedded Systems & IoT | Prototype Developer</h2>
               <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg mb-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">Hi, I'm Dipjyoti Kodali, a final-year student and tech innovator passionate about sensor technologies, embedded systems, and IoT.</p>
               </div>
