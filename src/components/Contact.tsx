@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Github, Linkedin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,20 +12,22 @@ const Contact = () => {
     message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
     try {
       console.log('Initializing EmailJS...');
       // Initialize EmailJS with your public key
@@ -39,31 +40,27 @@ const Contact = () => {
         subject: formData.message,
         message: formData.message,
         to_email: 'dipjyotikodali@gmail.com',
-        reply_to: formData.email,
+        reply_to: formData.email
       };
-
       console.log('Template params:', templateParams);
       console.log('Service ID:', 'service_hfq298q');
       console.log('Template ID:', 'template_rgfdhlb');
 
       // Send email using EmailJS
-      const result = await emailjs.send(
-        'service_hfq298q',
-        'template_rgfdhlb',
-        templateParams,
-        'ogfwjcGa5Pwe99uW1'
-      );
-
+      const result = await emailjs.send('service_hfq298q', 'template_rgfdhlb', templateParams, 'ogfwjcGa5Pwe99uW1');
       console.log('EmailJS response:', result);
-      
       if (result.status === 200) {
         toast({
           title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
+          description: "Thank you for reaching out. I'll get back to you soon."
         });
-        
+
         // Reset form
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
       } else {
         throw new Error(`EmailJS returned status: ${result.status}`);
       }
@@ -72,21 +69,17 @@ const Contact = () => {
       toast({
         title: "Failed to send message",
         description: "There was an error sending your message. Please check the console for details or try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section id="contact" className="py-20">
+  return <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Let's collaborate on innovative projects or discuss exciting opportunities in embedded systems and IoT
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Let's collaborate on innovative projects or discuss exciting opportunities in Embedded Systems, IoT and Data Analytics</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -162,45 +155,20 @@ const Contact = () => {
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name *
                     </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="Your full name"
-                      disabled={isLoading}
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Your full name" disabled={isLoading} />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email *
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="your.email@example.com"
-                      disabled={isLoading}
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required placeholder="your.email@example.com" disabled={isLoading} />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message *
                   </label>
-                  <Input
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    placeholder="What's this about?"
-                    disabled={isLoading}
-                  />
+                  <Input id="message" name="message" value={formData.message} onChange={handleInputChange} required placeholder="What's this about?" disabled={isLoading} />
                 </div>
                 <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
                   {isLoading ? "Sending..." : "Send Message"}
@@ -210,8 +178,6 @@ const Contact = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

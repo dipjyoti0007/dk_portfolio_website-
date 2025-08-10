@@ -45,9 +45,7 @@ const About = () => {
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full"></div>
               <CardContent className="p-0 relative z-10">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">I'm Dipjyoti Kodali, an electronics enthusiast, tech innovator, and lifelong learner from India. I'm currently pursuing my undergraduate degree in Electronics and Instrumentation Engineering at Heritage Institute of Technology, where my passion for creating meaningful, tech-driven solutions truly took shape.
-
-From sensor-based health devices to IoT systems that think smartly, I enjoy turning complex problems into real-world prototypes. I believe the right mix of hardware, code, and creativity can spark genuine change—and I love being part of that process.</p>
+                <p className="text-muted-foreground leading-relaxed mb-4">I'm Dipjyoti Kodali, an electronics enthusiast, tech innovator, and lifelong learner from India. I'm currently pursuing my undergraduate degree in Electronics and Instrumentation Engineering at Heritage Institute of Technology, where my passion for creating meaningful, tech-driven solutions for real-life problems. From sensor-based health devices to IoT systems that think smartly, I enjoy turning complex problems into real-world prototypes. I believe the right mix of hardware, code, and creativity can spark genuine change—and I love being part of that process.</p>
                 
               </CardContent>
             </Card>
